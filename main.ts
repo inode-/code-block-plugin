@@ -1,6 +1,8 @@
 import { App, Editor, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
-const hljs = require('highlight.js');
+const hljs = require('highlight.js/lib/common');
+hljs.registerLanguage('http', require('highlight.js/lib/languages/http')); 
+
 
 interface CodeBlockPluginSettings {
 	languages: string[];
